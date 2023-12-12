@@ -1,0 +1,36 @@
+name: "Static Analysis"
+
+on:
+  push:
+    branches:
+      - master
+      - '*.x'
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  static-analysis:
+    name: Static Analysis
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          coverage: none
+          php-version: 8.3
+
+      - name: Install dependencies
+        uses: ramsey/composer-install@v3
+
+      - name: Static Analysis (PHPStan)
+        run: ./vendor/bin/psalm --output-format=github --no-progress

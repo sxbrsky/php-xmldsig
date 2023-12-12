@@ -1,0 +1,30 @@
+{
+    "name": "nuldark/xmldsig",
+    "license": "MIT",
+    "type": "library",
+    "require-dev": {
+        "charonlab/coding-standard": "1.2.x-dev",
+        "vimeo/psalm": "6.x-dev"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Nuldark\\XmlDSig\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        },
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "8.2.15"
+        },
+        "sort-packages": true
+    },
+    "scripts": {
+        "lint-check": "phpcs",
+        "lint-fix": "phpcbf",
+        "static-analysis": "psalm --shepherd --stats"
+    }
+}
