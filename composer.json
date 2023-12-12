@@ -1,0 +1,54 @@
+{
+    "name": "nulldark/ecdsa",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Dominik Szamburski",
+            "email": "dominikszamburski99@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "nulldark/devtools": "dev-master"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Vendor\\Ecdsa\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Nulldark\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "nulldark/devtools": true,
+            "phpstan/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "scripts": {
+        "analyze:md": "phpmd src/ xml phpmd.xml",
+        "analyze:phpstan": "phpstan analyze --ansi --memory-limit=1G",
+        "analyze:psalm": "psalm",
+        "build:clean": "git clean -fX build/.",
+        "build:clean:cache": "git clone -fX build/cache/.",
+        "build:clean:coverage": "git clone -fX build/coverage/.",
+        "checks": [
+            "@lint:fix",
+            "@lint:check",
+            "@analyze:psalm",
+            "@analyze:phpstan",
+            "@test:unit",
+            "@test:coverage:html"
+        ],
+        "lint:check": "phpcs",
+        "lint:fix": "phpcbf --standard=phpcs.xml.dist",
+        "lint:syntax": "parallel-lint --colors src tests",
+        "test:coverage:ci": "phpunit --colors=always --coverage-text --coverage-xml build/coverage/coverage-xml tests",
+        "test:coverage:html": "phpunit --colors=always --coverage-html build/coverage/coverage-html tests",
+        "test:unit": "phpunit --testsuite units"
+    }
+}
