@@ -4,12 +4,18 @@
     "type": "library",
     "require-dev": {
         "charonlab/coding-standard": "1.2.x-dev",
+        "phpunit/phpunit": "^11.1@dev",
         "vimeo/psalm": "6.x-dev"
     },
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Nuldark\\XmlDSig\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Nuldark\\Tests\\XmlDSig\\": "tests/"
         }
     },
     "config": {
