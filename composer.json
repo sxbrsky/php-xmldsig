@@ -5,7 +5,8 @@
     "require": {
         "ext-dom": "*",
         "ext-openssl": "*",
-        "nuldark/stdlib": "^2.2"
+        "nuldark/stdlib": "^2.2",
+        "starkbank/ecdsa": "^2.0"
     },
     "require-dev": {
         "charonlab/coding-standard": "1.2.x-dev",
