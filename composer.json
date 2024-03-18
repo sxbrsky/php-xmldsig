@@ -2,6 +2,11 @@
     "name": "nuldark/xmldsig",
     "license": "MIT",
     "type": "library",
+    "require": {
+        "ext-dom": "*",
+        "ext-openssl": "*",
+        "nuldark/stdlib": "^2.2"
+    },
     "require-dev": {
         "charonlab/coding-standard": "1.2.x-dev",
         "phpunit/phpunit": "^11.1@dev",
