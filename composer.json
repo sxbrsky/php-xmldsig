@@ -5,7 +5,7 @@
     "require": {
         "ext-dom": "*",
         "ext-openssl": "*",
-        "nuldark/stdlib": "^2.2",
+        "nuldark/stdlib": "^2.3",
         "starkbank/ecdsa": "^2.0"
     },
     "require-dev": {
