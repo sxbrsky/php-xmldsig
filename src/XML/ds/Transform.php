@@ -11,10 +11,14 @@
 
 namespace Nuldark\XmlDSig\XML\ds;
 
-final class Transform extends AbstractDsElement
+use Nuldark\XmlDSig\Constants as C;
+use Nuldark\XmlDSig\XML\ec\InclusiveNamespaces;
+
+class Transform extends AbstractDsElement
 {
-    public function __construct(
-        private readonly string $algorithm
+    final public function __construct(
+        protected string $algorithm,
+        protected ?InclusiveNamespaces $inclusiveNamespaces = null
     ) {
     }
 
@@ -28,11 +32,27 @@ final class Transform extends AbstractDsElement
     }
 
     /**
+     * Gets the inclusive namespaces.
+     *
+     * @return \Nuldark\XmlDSig\XML\ec\InclusiveNamespaces|null
+     */
+    public function getInclusiveNamespaces(): ?InclusiveNamespaces {
+        return $this->inclusiveNamespaces;
+    }
+
+    /**
      * @inheritDoc
      */
     public function toXML(\DOMElement $parent = null): \DOMElement {
+        $algorithm = $this->getAlgorithm();
+
         $e = $this->createElement($parent);
-        $e->setAttribute('Algorithm', $this->getAlgorithm());
+        $e->setAttribute('Algorithm', $algorithm);
+
+        match ($algorithm) {
+            C::C14N_EXCLUSIVE_WITH_COMMENTS,
+            C::C14N_EXCLUSIVE_WITHOUT_COMMENTS => $this->getInclusiveNamespaces()?->toXML($e)
+        };
 
         return $e;
     }
