@@ -16,7 +16,7 @@ final class Signature extends AbstractDsElement
     public function __construct(
         private readonly SignedInfo $signedInfo,
         private readonly SignatureValue $signatureValue,
-        private readonly KeyInfo $keyInfo,
+        private readonly ?KeyInfo $keyInfo
     ) {
     }
 
@@ -41,9 +41,9 @@ final class Signature extends AbstractDsElement
     /**
      * Gets the key info.
      *
-     * @return \Nuldark\XmlDSig\XML\ds\KeyInfo
+     * @return ?\Nuldark\XmlDSig\XML\ds\KeyInfo
      */
-    public function getKeyInfo(): KeyInfo {
+    public function getKeyInfo(): ?KeyInfo {
         return $this->keyInfo;
     }
 
@@ -55,7 +55,7 @@ final class Signature extends AbstractDsElement
 
         $this->getSignedInfo()->toXML($e);
         $this->getSignatureValue()->toXML($e);
-        $this->getKeyInfo()->toXML($e);
+        $this->getKeyInfo()?->toXML($e);
 
         return $e;
     }
