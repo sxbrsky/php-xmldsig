@@ -11,9 +11,9 @@ ehthumbs.db
 Thumbs.db
 
 # ide
-/.idea/
-/.fleet/
-/.run/
+/.idea
+/.fleet
+/.run
 
 #composer
 composer.lock
