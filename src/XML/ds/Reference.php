@@ -96,8 +96,8 @@ final class Reference extends AbstractDsElement
         }
 
         $this->getTransforms()?->toXML($e);
-        $this->getDigestMethod()?->toXML($e);
-        $this->getDigestValue()?->toXML($e);
+        $this->getDigestMethod()->toXML($e);
+        $this->getDigestValue()->toXML($e);
 
         return $e;
     }

@@ -25,7 +25,6 @@ final class Signature extends AbstractDsElement
      *
      * @return \Nuldark\XmlDSig\XML\ds\SignedInfo
      */
-
     public function getSignedInfo(): SignedInfo {
         return $this->signedInfo;
     }

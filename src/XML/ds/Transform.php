@@ -51,7 +51,8 @@ class Transform extends AbstractDsElement
 
         match ($algorithm) {
             C::C14N_EXCLUSIVE_WITH_COMMENTS,
-            C::C14N_EXCLUSIVE_WITHOUT_COMMENTS => $this->getInclusiveNamespaces()?->toXML($e)
+            C::C14N_EXCLUSIVE_WITHOUT_COMMENTS => $this->getInclusiveNamespaces()?->toXML($e),
+            default => null,
         };
 
         return $e;

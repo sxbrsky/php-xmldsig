@@ -11,23 +11,23 @@
 
 namespace Nuldark\XmlDSig\XML\ds;
 
-use Nuldark\XmlDSig\XML\CanonicalizationElementTrait;
+use Nuldark\Stdlib\XML\CanonicalizableElementTrait;
 
 final class SignedInfo extends AbstractDsElement
 {
-    use CanonicalizationElementTrait;
+    use CanonicalizableElementTrait;
 
     protected ?\DOMElement $xml = null;
 
     /**
      * @param \Nuldark\XmlDSig\XML\ds\CanonicalizationMethod $canonicalizationMethod
      * @param \Nuldark\XmlDSig\XML\ds\SignatureMethod $signatureMethod
-     * @param \Nuldark\XmlDSig\XML\ds\Reference[] $references
+     * @param \Nuldark\XmlDSig\XML\ds\References $references
      */
     public function __construct(
         private readonly CanonicalizationMethod $canonicalizationMethod,
         private readonly SignatureMethod $signatureMethod,
-        private readonly array $references
+        private readonly References $references
     ) {
     }
 
@@ -55,13 +55,13 @@ final class SignedInfo extends AbstractDsElement
      * @return \Nuldark\XmlDSig\XML\ds\Reference[]
      */
     public function getReferences(): array {
-        return $this->references;
+        return $this->references->getReferences();
     }
 
     /**
      * @inheritDoc
      */
-    public function getOriginalXML(): \DOMElement {
+    public function getXML(): \DOMElement {
         if ($this->xml !== null) {
             return $this->xml;
         }
