@@ -21,16 +21,17 @@ final class Signature extends AbstractDsElement
     }
 
     /**
-     * Gets the signed info.
+     * Gets the SignedInfo element.
      *
      * @return \Nuldark\XmlDSig\XML\ds\SignedInfo
      */
+
     public function getSignedInfo(): SignedInfo {
         return $this->signedInfo;
     }
 
     /**
-     * Gets the signature value.
+     * Gets the SignatureValue element.
      *
      * @return \Nuldark\XmlDSig\XML\ds\SignatureValue
      */
@@ -39,7 +40,7 @@ final class Signature extends AbstractDsElement
     }
 
     /**
-     * Gets the key info.
+     * Gets the KeyInfo element.
      *
      * @return ?\Nuldark\XmlDSig\XML\ds\KeyInfo
      */
