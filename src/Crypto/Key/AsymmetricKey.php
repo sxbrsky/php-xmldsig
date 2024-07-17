@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nuldark/xmldsig.
+ * This file is part of the nulxrd/xmldsig.
  *
  * Copyright (C) 2023 Dominik Szamburski
  *
@@ -9,10 +9,10 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Nuldark\XmlDSig\Crypto\Key;
+namespace XmlDSig\Crypto\Key;
 
-use Nuldark\XmlDSig\Crypto\Encoding\PEM;
-use Nuldark\XmlDSig\Exception\RuntimeException;
+use XmlDSig\Crypto\Encoding\PEM;
+use XmlDSig\Exception\RuntimeException;
 
 class AsymmetricKey implements KeyInterface
 {

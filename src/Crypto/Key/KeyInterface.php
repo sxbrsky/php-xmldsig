@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nuldark/xmldsig.
+ * This file is part of the nulxrd/xmldsig.
  *
  * Copyright (C) 2023 Dominik Szamburski
  *
@@ -9,9 +9,9 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Nuldark\XmlDSig\Crypto\Key;
+namespace XmlDSig\Crypto\Key;
 
-use Nuldark\XmlDSig\Crypto\Encoding\PEM;
+use XmlDSig\Crypto\Encoding\PEM;
 
 interface KeyInterface
 {
@@ -25,7 +25,7 @@ interface KeyInterface
     /**
      * Gets a PEM instance of this key.
      *
-     * @return \Nuldark\XmlDSig\Crypto\Encoding\PEM
+     * @return XmlDSig\Crypto\Encoding\PEM
      */
     public function getPEM(): PEM;
 }

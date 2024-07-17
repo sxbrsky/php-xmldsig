@@ -1,8 +1,8 @@
-# nuldark/xmldsig
+# XmlDSig
 
 ## Support
 
-- [Issues](https://github.com/nuldark/xmldsig/issues/)
+- [Issues](https://github.com/nulxrd/xmldsig/issues/)
 
 ## License
 

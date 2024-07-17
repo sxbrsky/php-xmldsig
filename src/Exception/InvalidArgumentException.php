@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nuldark/xmldsig.
+ * This file is part of the nulxrd/xmldsig.
  *
  * Copyright (C) 2023 Dominik Szamburski
  *
@@ -9,7 +9,7 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Nuldark\XmlDSig\Exception;
+namespace XmlDSig\Exception;
 
 class InvalidArgumentException extends \InvalidArgumentException
 {

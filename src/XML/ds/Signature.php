@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nuldark/xmldsig.
+ * This file is part of the nulxrd/xmldsig.
  *
  * Copyright (C) 2023 Dominik Szamburski
  *
@@ -9,7 +9,7 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Nuldark\XmlDSig\XML\ds;
+namespace XmlDSig\XML\ds;
 
 final class Signature extends AbstractDsElement
 {
@@ -23,7 +23,7 @@ final class Signature extends AbstractDsElement
     /**
      * Gets the SignedInfo element.
      *
-     * @return \Nuldark\XmlDSig\XML\ds\SignedInfo
+     * @return XmlDSig\XML\ds\SignedInfo
      */
     public function getSignedInfo(): SignedInfo {
         return $this->signedInfo;
@@ -32,7 +32,7 @@ final class Signature extends AbstractDsElement
     /**
      * Gets the SignatureValue element.
      *
-     * @return \Nuldark\XmlDSig\XML\ds\SignatureValue
+     * @return XmlDSig\XML\ds\SignatureValue
      */
     public function getSignatureValue(): SignatureValue {
         return $this->signatureValue;
@@ -41,7 +41,7 @@ final class Signature extends AbstractDsElement
     /**
      * Gets the KeyInfo element.
      *
-     * @return ?\Nuldark\XmlDSig\XML\ds\KeyInfo
+     * @return ?XmlDSig\XML\ds\KeyInfo
      */
     public function getKeyInfo(): ?KeyInfo {
         return $this->keyInfo;

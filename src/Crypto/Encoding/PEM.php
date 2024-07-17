@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nuldark/xmldsig.
+ * This file is part of the nulxrd/xmldsig.
  *
  * Copyright (C) 2023 Dominik Szamburski
  *
@@ -9,9 +9,9 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Nuldark\XmlDSig\Crypto\Encoding;
+namespace XmlDSig\Crypto\Encoding;
 
-use Nuldark\XmlDSig\Exception\InvalidKeyFormatException;
+use XmlDSig\Exception\InvalidKeyFormatException;
 
 final class PEM
 {

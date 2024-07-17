@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nuldark/xmldsig.
+ * This file is part of the nulxrd/xmldsig.
  *
  * Copyright (C) 2023 Dominik Szamburski
  *
@@ -9,7 +9,7 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Nuldark\XmlDSig\XML\ds;
+namespace XmlDSig\XML\ds;
 
 final class Reference extends AbstractDsElement
 {
@@ -26,7 +26,7 @@ final class Reference extends AbstractDsElement
     /**
      * Gets the DigestMethod element.
      *
-     * @return \Nuldark\XmlDSig\XML\ds\DigestMethod
+     * @return XmlDSig\XML\ds\DigestMethod
      */
     public function getDigestMethod(): DigestMethod {
         return $this->digestMethod;
@@ -35,7 +35,7 @@ final class Reference extends AbstractDsElement
     /**
      * Gets the DigestValue element.
      *
-     * @return \Nuldark\XmlDSig\XML\ds\DigestValue
+     * @return XmlDSig\XML\ds\DigestValue
      */
     public function getDigestValue(): DigestValue {
         return $this->digestValue;
@@ -44,7 +44,7 @@ final class Reference extends AbstractDsElement
     /**
      * Gets the Transforms element.
      *
-     * @return \Nuldark\XmlDSig\XML\ds\Transforms|null
+     * @return XmlDSig\XML\ds\Transforms|null
      */
     public function getTransforms(): ?Transforms {
         return $this->transforms;

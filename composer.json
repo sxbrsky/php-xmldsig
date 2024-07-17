@@ -1,5 +1,5 @@
 {
-    "name": "nuldark/xmldsig",
+    "name": "nulxrd/xmldsig",
     "license": "MIT",
     "type": "library",
     "require": {
@@ -16,12 +16,12 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Nuldark\\XmlDSig\\": "src/"
+            "XmlDSig\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Nuldark\\Tests\\XmlDSig\\": "tests/"
+            "XmlDSigTests\\": "tests/"
         }
     },
     "config": {

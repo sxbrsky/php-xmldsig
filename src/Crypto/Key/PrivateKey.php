@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nuldark/xmldsig.
+ * This file is part of the nulxrd/xmldsig.
  *
  * Copyright (C) 2023 Dominik Szamburski
  *
@@ -10,7 +10,7 @@
  */
 
 
-namespace Nuldark\XmlDSig\Crypto\Key;
+namespace XmlDSig\Crypto\Key;
 
 class PrivateKey extends AsymmetricKey
 {

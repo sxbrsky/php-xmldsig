@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nuldark/xmldsig.
+ * This file is part of the nulxrd/xmldsig.
  *
  * Copyright (C) 2023 Dominik Szamburski
  *
@@ -9,12 +9,12 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Nuldark\XmlDSig\XML\ds;
+namespace XmlDSig\XML\ds;
 
 final class References
 {
     /**
-     * @param \Nuldark\XmlDSig\XML\ds\Reference[] $references
+     * @param XmlDSig\XML\ds\Reference[] $references
      */
     public function __construct(
         protected array $references = [],
@@ -24,7 +24,7 @@ final class References
     /**
      * Gets the reference.
      *
-     * @return \Nuldark\XmlDSig\XML\ds\Reference[]
+     * @return XmlDSig\XML\ds\Reference[]
      */
     public function getReferences(): array {
         return $this->references;

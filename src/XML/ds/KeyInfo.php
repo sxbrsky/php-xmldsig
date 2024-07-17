@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nuldark/xmldsig.
+ * This file is part of the nulxrd/xmldsig.
  *
  * Copyright (C) 2023 Dominik Szamburski
  *
@@ -9,7 +9,7 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Nuldark\XmlDSig\XML\ds;
+namespace XmlDSig\XML\ds;
 
 final class KeyInfo extends AbstractDsElement
 {
@@ -21,7 +21,7 @@ final class KeyInfo extends AbstractDsElement
     /**
      * Gets the X509Data.
      *
-     * @return \Nuldark\XmlDSig\XML\ds\X509Data
+     * @return XmlDSig\XML\ds\X509Data
      */
     public function getX509Data(): X509Data {
         return $this->x509Data;

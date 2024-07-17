@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nuldark/xmldsig.
+ * This file is part of the nulxrd/xmldsig.
  *
  * Copyright (C) 2023 Dominik Szamburski
  *
@@ -9,9 +9,9 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Nuldark\XmlDSig\Crypto\Backend;
+namespace XmlDSig\Crypto\Backend;
 
-use Nuldark\XmlDSig\Crypto\Key\KeyInterface;
+use XmlDSig\Crypto\Key\KeyInterface;
 
 interface SignatureBackendInterface
 {
@@ -28,14 +28,14 @@ interface SignatureBackendInterface
     /**
      * Sings given plaintext.
      *
-     * @param \Nuldark\XmlDSig\Crypto\Key\KeyInterface $key
+     * @param XmlDSig\Crypto\Key\KeyInterface $key
      *  The key used to sign.
      * @param string $plaintext
      *  Text to be signed.
      *
      * @return string
      *
-     * @throws \Nuldark\XmlDSig\Exception\SigningException
+     * @throws XmlDSig\Exception\SigningException
      */
     public function sign(KeyInterface $key, string $plaintext): string;
 }

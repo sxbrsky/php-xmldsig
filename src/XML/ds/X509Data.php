@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nuldark/xmldsig.
+ * This file is part of the nulxrd/xmldsig.
  *
  * Copyright (C) 2023 Dominik Szamburski
  *
@@ -9,12 +9,12 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Nuldark\XmlDSig\XML\ds;
+namespace XmlDSig\XML\ds;
 
 final class X509Data extends AbstractDsElement
 {
     /**
-     * @param \Nuldark\XmlDSig\XML\ds\X509Certificate[] $certificates
+     * @param XmlDSig\XML\ds\X509Certificate[] $certificates
      */
     public function __construct(
         private readonly array $certificates
@@ -24,7 +24,7 @@ final class X509Data extends AbstractDsElement
     /**
      * Get the certificates.
      *
-     * @return \Nuldark\XmlDSig\XML\ds\X509Certificate[]
+     * @return XmlDSig\XML\ds\X509Certificate[]
      */
     public function getCertificates(): array {
         return $this->certificates;

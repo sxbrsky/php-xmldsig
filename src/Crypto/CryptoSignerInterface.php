@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nuldark/xmldsig.
+ * This file is part of the nulxrd/xmldsig.
  *
  * Copyright (C) 2023 Dominik Szamburski
  *
@@ -9,9 +9,9 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Nuldark\XmlDSig\Crypto;
+namespace XmlDSig\Crypto;
 
-use Nuldark\XmlDSig\Crypto\Backend\SignatureBackendInterface;
+use XmlDSig\Crypto\Backend\SignatureBackendInterface;
 
 interface CryptoSignerInterface
 {
@@ -32,7 +32,7 @@ interface CryptoSignerInterface
     /**
      * Sets the signature algorithm backend.
      *
-     * @param \Nuldark\XmlDSig\Crypto\Backend\SignatureBackendInterface|null $backend
+     * @param XmlDSig\Crypto\Backend\SignatureBackendInterface|null $backend
      *  The backend.
      *
      * @return void

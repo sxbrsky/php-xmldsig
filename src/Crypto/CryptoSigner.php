@@ -1,20 +1,19 @@
 <?php
 
 /*
- * This file is part of the nuldark/xmldsig.
- *
+XmlDSig *
  * Copyright (C) 2023 Dominik Szamburski
  *
  * This software may be modified and distributed under the terms
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Nuldark\XmlDSig\Crypto;
+namespace XmlDSig\Crypto;
 
-use Nuldark\XmlDSig\Constants as C;
-use Nuldark\XmlDSig\Crypto\Backend\OpenSSL;
-use Nuldark\XmlDSig\Crypto\Backend\SignatureBackendInterface;
-use Nuldark\XmlDSig\Crypto\Key\KeyInterface;
+use XmlDSig\Constants as C;
+use XmlDSig\Crypto\Backend\OpenSSL;
+use XmlDSig\Crypto\Backend\SignatureBackendInterface;
+use XmlDSig\Crypto\Key\KeyInterface;
 
 class CryptoSigner implements CryptoSignerInterface
 {

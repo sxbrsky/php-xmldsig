@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nuldark/xmldsig.
+ * This file is part of the nulxrd/xmldsig.
  *
  * Copyright (C) 2023 Dominik Szamburski
  *
@@ -9,10 +9,10 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Nuldark\XmlDSig\XML\ec;
+namespace XmlDSig\XML\ec;
 
 use Nuldark\Stdlib\XML\AbstractElement;
-use Nuldark\XmlDSig\Constants as C;
+use XmlDSig\Constants as C;
 
 abstract class AbstractEcElement extends AbstractElement
 {

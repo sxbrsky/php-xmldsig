@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nuldark/xmldsig.
+ * This file is part of the nulxrd/xmldsig.
  *
  * Copyright (C) 2023 Dominik Szamburski
  *
@@ -9,12 +9,12 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Nuldark\XmlDSig\XML\ds;
+namespace XmlDSig\XML\ds;
 
 final class Transforms extends AbstractDsElement
 {
     public function __construct(
-        /** @var \Nuldark\XmlDSig\XML\ds\Transform[] $transforms */
+        /** @var XmlDSig\XML\ds\Transform[] $transforms */
         private readonly array $transforms
     ) {
     }
@@ -22,7 +22,7 @@ final class Transforms extends AbstractDsElement
     /**
      * Gets the list of transforms.
      *
-     * @return \Nuldark\XmlDSig\XML\ds\Transform[]
+     * @return XmlDSig\XML\ds\Transform[]
      */
     public function getTransforms(): array {
         return $this->transforms;

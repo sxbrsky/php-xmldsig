@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nuldark/xmldsig.
+ * This file is part of the nulxrd/xmldsig.
  *
  * Copyright (C) 2023 Dominik Szamburski
  *
@@ -9,11 +9,11 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Nuldark\XmlDSig\Crypto\Backend;
+namespace XmlDSig\Crypto\Backend;
 
-use Nuldark\XmlDSig\Constants as C;
-use Nuldark\XmlDSig\Crypto\Key\KeyInterface;
-use Nuldark\XmlDSig\Exception\SigningException;
+use XmlDSig\Constants as C;
+use XmlDSig\Crypto\Key\KeyInterface;
+use XmlDSig\Exception\SigningException;
 
 final class OpenSSL implements SignatureBackendInterface
 {

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nuldark/xmldsig.
+ * This file is part of the nulxrd/xmldsig.
  *
  * Copyright (C) 2023 Dominik Szamburski
  *
@@ -9,10 +9,10 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Nuldark\XmlDSig\XML\ds;
+namespace XmlDSig\XML\ds;
 
-use Nuldark\XmlDSig\Constants as C;
-use Nuldark\XmlDSig\XML\ec\InclusiveNamespaces;
+use XmlDSig\Constants as C;
+use XmlDSig\XML\ec\InclusiveNamespaces;
 
 class Transform extends AbstractDsElement
 {
@@ -34,7 +34,7 @@ class Transform extends AbstractDsElement
     /**
      * Gets the inclusive namespaces.
      *
-     * @return \Nuldark\XmlDSig\XML\ec\InclusiveNamespaces|null
+     * @return XmlDSig\XML\ec\InclusiveNamespaces|null
      */
     public function getInclusiveNamespaces(): ?InclusiveNamespaces {
         return $this->inclusiveNamespaces;

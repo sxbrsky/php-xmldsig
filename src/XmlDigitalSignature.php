@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nuldark/xmldsig.
+ * This file is part of the nulxrd/xmldsig.
  *
  * Copyright (C) 2023 Dominik Szamburski
  *
@@ -9,37 +9,37 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Nuldark\XmlDSig;
+namespace XmlDSig;
 
 use Nuldark\Stdlib\XML;
-use Nuldark\XmlDSig\Crypto\CryptoSigner;
-use Nuldark\XmlDSig\Exception\UnsupportedCanonicalizationAlgorithm;
-use Nuldark\XmlDSig\XML\ds\CanonicalizationMethod;
-use Nuldark\XmlDSig\XML\ds\DigestMethod;
-use Nuldark\XmlDSig\XML\ds\DigestValue;
-use Nuldark\XmlDSig\XML\ds\KeyInfo;
-use Nuldark\XmlDSig\XML\ds\Reference;
-use Nuldark\XmlDSig\XML\ds\References;
-use Nuldark\XmlDSig\XML\ds\Signature;
-use Nuldark\XmlDSig\XML\ds\SignatureMethod;
-use Nuldark\XmlDSig\XML\ds\SignatureValue;
-use Nuldark\XmlDSig\XML\ds\SignedInfo;
-use Nuldark\XmlDSig\XML\ds\Transform;
-use Nuldark\XmlDSig\XML\ds\Transforms;
-use Nuldark\XmlDSig\Constants as C;
+use XmlDSig\Crypto\CryptoSigner;
+use XmlDSig\Exception\UnsupportedCanonicalizationAlgorithm;
+use XmlDSig\XML\ds\CanonicalizationMethod;
+use XmlDSig\XML\ds\DigestMethod;
+use XmlDSig\XML\ds\DigestValue;
+use XmlDSig\XML\ds\KeyInfo;
+use XmlDSig\XML\ds\Reference;
+use XmlDSig\XML\ds\References;
+use XmlDSig\XML\ds\Signature;
+use XmlDSig\XML\ds\SignatureMethod;
+use XmlDSig\XML\ds\SignatureValue;
+use XmlDSig\XML\ds\SignedInfo;
+use XmlDSig\XML\ds\Transform;
+use XmlDSig\XML\ds\Transforms;
+use XmlDSig\Constants as C;
 
 class XmlDigitalSignature
 {
     /** @var string $canonicalizationMethod */
     protected string $canonicalizationMethod = C::C14N_EXCLUSIVE_WITHOUT_COMMENTS;
 
-    /** @var \Nuldark\XmlDSig\XML\ds\Reference[] $references */
+    /** @var XmlDSig\XML\ds\Reference[] $references */
     protected array $references = [];
 
-    /** @var \Nuldark\XmlDSig\XML\ds\KeyInfo|null $keyInfo */
+    /** @var XmlDSig\XML\ds\KeyInfo|null $keyInfo */
     protected ?KeyInfo $keyInfo = null;
 
-    /** @var \Nuldark\XmlDSig\XML\ds\Signature|null $signature */
+    /** @var XmlDSig\XML\ds\Signature|null $signature */
     protected ?Signature $signature = null;
 
     public function __construct(
@@ -112,7 +112,7 @@ class XmlDigitalSignature
      *  The reference document.
      * @param string $c14nAlg
      *  The canonicalization method.
-     * @param \Nuldark\XmlDSig\XML\ds\Transforms|null $transforms
+     * @param XmlDSig\XML\ds\Transforms|null $transforms
      *  The transformation to be applied.
      * @param array $options
      *  An array of options.
@@ -148,7 +148,7 @@ class XmlDigitalSignature
     /**
      * Gets an signature element.
      *
-     * @return \Nuldark\XmlDSig\XML\ds\Signature|null
+     * @return XmlDSig\XML\ds\Signature|null
      */
     public function getSignature(): ?Signature {
         return $this->signature;
@@ -157,7 +157,7 @@ class XmlDigitalSignature
     /**
      * Generates a signature element.
      *
-     * @return \Nuldark\XmlDSig\XML\ds\Signature
+     * @return XmlDSig\XML\ds\Signature
      */
     protected function doSign(): Signature {
         $algorithm = $this->signer->getAlgorithm();
@@ -177,7 +177,7 @@ class XmlDigitalSignature
     /**
      * Process given transforms.
      *
-     * @param \Nuldark\XmlDSig\XML\ds\Transforms $transforms
+     * @param XmlDSig\XML\ds\Transforms $transforms
      *  A transforms to apply.
      * @param \DOMElement $doc
      *  The document to process.
