@@ -21,7 +21,7 @@ final class KeyInfo extends AbstractDsElement
     /**
      * Gets the X509Data.
      *
-     * @return XmlDSig\XML\ds\X509Data
+     * @return \XmlDSig\XML\ds\X509Data
      */
     public function getX509Data(): X509Data {
         return $this->x509Data;

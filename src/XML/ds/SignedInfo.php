@@ -20,9 +20,9 @@ final class SignedInfo extends AbstractDsElement
     protected ?\DOMElement $xml = null;
 
     /**
-     * @param XmlDSig\XML\ds\CanonicalizationMethod $canonicalizationMethod
-     * @param XmlDSig\XML\ds\SignatureMethod $signatureMethod
-     * @param XmlDSig\XML\ds\References $references
+     * @param \XmlDSig\XML\ds\CanonicalizationMethod $canonicalizationMethod
+     * @param \XmlDSig\XML\ds\SignatureMethod $signatureMethod
+     * @param \XmlDSig\XML\ds\References $references
      */
     public function __construct(
         private readonly CanonicalizationMethod $canonicalizationMethod,
@@ -34,7 +34,7 @@ final class SignedInfo extends AbstractDsElement
     /**
      * Gets the signature method.
      *
-     * @return XmlDSig\XML\ds\SignatureMethod
+     * @return \XmlDSig\XML\ds\SignatureMethod
      */
     public function getSignatureMethod(): SignatureMethod {
         return $this->signatureMethod;
@@ -43,7 +43,7 @@ final class SignedInfo extends AbstractDsElement
     /**
      * Gets the canonicalization method.
      *
-     * @return XmlDSig\XML\ds\CanonicalizationMethod
+     * @return \XmlDSig\XML\ds\CanonicalizationMethod
      */
     public function getCanonicalizationMethod(): CanonicalizationMethod {
         return $this->canonicalizationMethod;
@@ -52,7 +52,7 @@ final class SignedInfo extends AbstractDsElement
     /**
      * Gets a references.
      *
-     * @return XmlDSig\XML\ds\Reference[]
+     * @return \XmlDSig\XML\ds\Reference[]
      */
     public function getReferences(): array {
         return $this->references->getReferences();

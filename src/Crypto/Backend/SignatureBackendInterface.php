@@ -28,7 +28,7 @@ interface SignatureBackendInterface
     /**
      * Sings given plaintext.
      *
-     * @param XmlDSig\Crypto\Key\KeyInterface $key
+     * @param \XmlDSig\Crypto\Key\KeyInterface $key
      *  The key used to sign.
      * @param string $plaintext
      *  Text to be signed.

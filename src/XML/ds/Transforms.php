@@ -14,7 +14,7 @@ namespace XmlDSig\XML\ds;
 final class Transforms extends AbstractDsElement
 {
     public function __construct(
-        /** @var XmlDSig\XML\ds\Transform[] $transforms */
+        /** @var \XmlDSig\XML\ds\Transform[] $transforms */
         private readonly array $transforms
     ) {
     }
@@ -22,7 +22,7 @@ final class Transforms extends AbstractDsElement
     /**
      * Gets the list of transforms.
      *
-     * @return XmlDSig\XML\ds\Transform[]
+     * @return \XmlDSig\XML\ds\Transform[]
      */
     public function getTransforms(): array {
         return $this->transforms;

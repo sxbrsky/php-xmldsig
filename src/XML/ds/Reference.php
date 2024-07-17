@@ -26,7 +26,7 @@ final class Reference extends AbstractDsElement
     /**
      * Gets the DigestMethod element.
      *
-     * @return XmlDSig\XML\ds\DigestMethod
+     * @return \XmlDSig\XML\ds\DigestMethod
      */
     public function getDigestMethod(): DigestMethod {
         return $this->digestMethod;
@@ -35,7 +35,7 @@ final class Reference extends AbstractDsElement
     /**
      * Gets the DigestValue element.
      *
-     * @return XmlDSig\XML\ds\DigestValue
+     * @return \XmlDSig\XML\ds\DigestValue
      */
     public function getDigestValue(): DigestValue {
         return $this->digestValue;
@@ -44,7 +44,7 @@ final class Reference extends AbstractDsElement
     /**
      * Gets the Transforms element.
      *
-     * @return XmlDSig\XML\ds\Transforms|null
+     * @return \XmlDSig\XML\ds\Transforms|null
      */
     public function getTransforms(): ?Transforms {
         return $this->transforms;

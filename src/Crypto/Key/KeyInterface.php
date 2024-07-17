@@ -25,7 +25,7 @@ interface KeyInterface
     /**
      * Gets a PEM instance of this key.
      *
-     * @return XmlDSig\Crypto\Encoding\PEM
+     * @return \XmlDSig\Crypto\Encoding\PEM
      */
     public function getPEM(): PEM;
 }

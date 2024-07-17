@@ -14,7 +14,7 @@ namespace XmlDSig\XML\ds;
 final class References
 {
     /**
-     * @param XmlDSig\XML\ds\Reference[] $references
+     * @param \XmlDSig\XML\ds\Reference[] $references
      */
     public function __construct(
         protected array $references = [],
@@ -24,7 +24,7 @@ final class References
     /**
      * Gets the reference.
      *
-     * @return XmlDSig\XML\ds\Reference[]
+     * @return \XmlDSig\XML\ds\Reference[]
      */
     public function getReferences(): array {
         return $this->references;

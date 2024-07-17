@@ -14,7 +14,7 @@ namespace XmlDSig\XML\ds;
 final class X509Data extends AbstractDsElement
 {
     /**
-     * @param XmlDSig\XML\ds\X509Certificate[] $certificates
+     * @param \XmlDSig\XML\ds\X509Certificate[] $certificates
      */
     public function __construct(
         private readonly array $certificates
@@ -24,7 +24,7 @@ final class X509Data extends AbstractDsElement
     /**
      * Get the certificates.
      *
-     * @return XmlDSig\XML\ds\X509Certificate[]
+     * @return \XmlDSig\XML\ds\X509Certificate[]
      */
     public function getCertificates(): array {
         return $this->certificates;

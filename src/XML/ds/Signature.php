@@ -23,7 +23,7 @@ final class Signature extends AbstractDsElement
     /**
      * Gets the SignedInfo element.
      *
-     * @return XmlDSig\XML\ds\SignedInfo
+     * @return \XmlDSig\XML\ds\SignedInfo
      */
     public function getSignedInfo(): SignedInfo {
         return $this->signedInfo;
@@ -32,7 +32,7 @@ final class Signature extends AbstractDsElement
     /**
      * Gets the SignatureValue element.
      *
-     * @return XmlDSig\XML\ds\SignatureValue
+     * @return \XmlDSig\XML\ds\SignatureValue
      */
     public function getSignatureValue(): SignatureValue {
         return $this->signatureValue;

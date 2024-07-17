@@ -34,7 +34,7 @@ class Transform extends AbstractDsElement
     /**
      * Gets the inclusive namespaces.
      *
-     * @return XmlDSig\XML\ec\InclusiveNamespaces|null
+     * @return \XmlDSig\XML\ec\InclusiveNamespaces|null
      */
     public function getInclusiveNamespaces(): ?InclusiveNamespaces {
         return $this->inclusiveNamespaces;

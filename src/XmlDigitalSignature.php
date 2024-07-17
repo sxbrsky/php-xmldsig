@@ -33,13 +33,13 @@ class XmlDigitalSignature
     /** @var string $canonicalizationMethod */
     protected string $canonicalizationMethod = C::C14N_EXCLUSIVE_WITHOUT_COMMENTS;
 
-    /** @var XmlDSig\XML\ds\Reference[] $references */
+    /** @var \XmlDSig\XML\ds\Reference[] $references */
     protected array $references = [];
 
-    /** @var XmlDSig\XML\ds\KeyInfo|null $keyInfo */
+    /** @var \XmlDSig\XML\ds\KeyInfo|null $keyInfo */
     protected ?KeyInfo $keyInfo = null;
 
-    /** @var XmlDSig\XML\ds\Signature|null $signature */
+    /** @var \XmlDSig\XML\ds\Signature|null $signature */
     protected ?Signature $signature = null;
 
     public function __construct(
@@ -112,7 +112,7 @@ class XmlDigitalSignature
      *  The reference document.
      * @param string $c14nAlg
      *  The canonicalization method.
-     * @param XmlDSig\XML\ds\Transforms|null $transforms
+     * @param \XmlDSig\XML\ds\Transforms|null $transforms
      *  The transformation to be applied.
      * @param array $options
      *  An array of options.
@@ -148,7 +148,7 @@ class XmlDigitalSignature
     /**
      * Gets an signature element.
      *
-     * @return XmlDSig\XML\ds\Signature|null
+     * @return \XmlDSig\XML\ds\Signature|null
      */
     public function getSignature(): ?Signature {
         return $this->signature;
@@ -157,7 +157,7 @@ class XmlDigitalSignature
     /**
      * Generates a signature element.
      *
-     * @return XmlDSig\XML\ds\Signature
+     * @return \XmlDSig\XML\ds\Signature
      */
     protected function doSign(): Signature {
         $algorithm = $this->signer->getAlgorithm();
@@ -177,7 +177,7 @@ class XmlDigitalSignature
     /**
      * Process given transforms.
      *
-     * @param XmlDSig\XML\ds\Transforms $transforms
+     * @param \XmlDSig\XML\ds\Transforms $transforms
      *  A transforms to apply.
      * @param \DOMElement $doc
      *  The document to process.

@@ -32,7 +32,7 @@ interface CryptoSignerInterface
     /**
      * Sets the signature algorithm backend.
      *
-     * @param XmlDSig\Crypto\Backend\SignatureBackendInterface|null $backend
+     * @param \XmlDSig\Crypto\Backend\SignatureBackendInterface|null $backend
      *  The backend.
      *
      * @return void
