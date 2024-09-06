@@ -1,8 +1,8 @@
-Nuldark# XmlDSig
+# xmldsig
 
 ## Support
 
-- [Issues](https://github.com/nulxrd/xmldsig/issues/)
+- [Issues](https://github.com/nulxrd/php-xmldsig/issues/)
 
 ## License
 

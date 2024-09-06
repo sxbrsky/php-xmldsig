@@ -1,5 +1,5 @@
 {
-    "name": "nulxrd/xmldsig",
+    "name": "sxbrsky/xmldsig",
     "license": "MIT",
     "type": "library",
     "require": {
