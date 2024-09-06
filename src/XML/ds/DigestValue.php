@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nulxrd/xmldsig.
+ * This file is part of the sxbrsky/xmldsig.
  *
  * Copyright (C) 2023 Dominik Szamburski
  *

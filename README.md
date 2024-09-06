@@ -2,7 +2,7 @@
 
 ## Support
 
-- [Issues](https://github.com/nulxrd/php-xmldsig/issues/)
+- [Issues](https://github.com/sxbrsky/php-xmldsig/issues/)
 
 ## License
 
